@@ -4,54 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Applications interactives</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            background-color: #FFD43A;
-        }
-
-        .width {
-            width: 100%;
-        }
-
-        /* main {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-around;
-        } */
-
-        .pfc {
-            width: 50%;
-            color: #D668E3;
-            background-color: #582C12;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0 15px 0 0;
-        }
-
-        .avatar {
-            max-height: 300px;
-        }
-
-        button {
-            width: 30%;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <main>
         <h1 class="width">Pierre, feuille ciseaux !</h1>
-        <p class="width">Insérer les règles</p>        
+        <p class="compteur"></p>     
         <div class="pfc">
             <img class="avatar" src="./images/5wt1vl6ku4781.gif" alt="Ordinateur humanïde souriant">
-            <p id="affichage"></p>
+            <div class="action">
+                <img class="choixAvatar svg hide">
+                <p class="affichage"></p>
+            </div>
         </div>
-        <p>Choisissez !</p>
-        <button id="Pierre">Pierre</button>
-        <button id="Feuille">Feuille</button>
-        <button id="Ciseaux">Ciseaux</button>
+        <p class="instruction">Choisissez !</p>
+        <button id="Pierre"><img class="svg" src="./images/pierre.svg" alt="pierre"></button>
+        <button id="Feuille"><img class="svg" src="./images/feuille.svg" alt="feuille"></button>
+        <button id="Ciseaux"><img class="svg" src="./images/sciseaux.svg" alt="sciseaux"></button>
     </main>
     <script src="script.js"></script>
 </body>

@@ -1,10 +1,11 @@
 function pierreFeuilleCiseaux() {
-    const affichage = document.getElementById("affichage");
-    const choix = ["Pierre", "Feuille", "Ciseaux"]; // Initialise les choix de l'ordinateur
+    const affichage = document.querySelector(".affichage");
+    const choixAvatar = document.querySelector(".choixAvatar"); 
+    const choix = [["Pierre", "./images/pierre.svg"], ["Feuille", "./images/feuille.svg"], ["Ciseaux", "./images/sciseaux.svg"]]; // Initialise les choix de l'ordinateur
     const index = Math.floor(Math.random() * 3); // Génère un nombre aléatoire entre 0 et 2  
-
-    const ordi = choix[index]; // L'action de l'ordi
-
+    
+    const ordi = choix[index][0]; // L'action de l'ordi
+    
     let resultat = "";
     
     if (this.id === ordi) {
@@ -35,12 +36,19 @@ function pierreFeuilleCiseaux() {
         }
     }
     affichage.innerHTML = `J'ai choisi ${ordi}, ${resultat}`;
+    choixAvatar.src= choix[index][1];
+    choixAvatar.classList.remove("hide");
     return;
 }
 
-const pierre = document.getElementById("Pierre");
-const feuille = document.getElementById("Feuille");
-const ciseaux = document.getElementById("Ciseaux");
+
+// const compteur = document.querySelector(".compteur");
+// let nbrVictoire = 0;
+// compteur.innerHTML = `Nombre de victoires : ${nbrVictoire}.`
+
+const pierre = document.querySelector("#Pierre");
+const feuille = document.querySelector("#Feuille");
+const ciseaux = document.querySelector("#Ciseaux");
 
 pierre.addEventListener("click", pierreFeuilleCiseaux);
 feuille.addEventListener("click", pierreFeuilleCiseaux);
