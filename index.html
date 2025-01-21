@@ -8,40 +8,20 @@
 </head>
 <body>
     <main>
-        <section class="pfc">
-            <h1 class="width">Pierre, feuille ciseaux !</h1>
-            <p class="compteur"></p>
-            <div class="adversaire">
-                <img class="avatar" src="./images/ordinateur.gif" alt="Ordinateur humanïde souriant">
-                <div class="action">
-                    <img class="choixAvatar svg hide">
-                    <p class="affichage"></p>
-                </div>
+        <h1 class="width">Pierre, feuille ciseaux !</h1>
+        <p class="compteur"></p>     
+        <div class="pfc">
+            <img class="avatar" src="./images/5wt1vl6ku4781.gif" alt="Ordinateur humanïde souriant">
+            <div class="action">
+                <img class="choixAvatar svg hide">
+                <p class="affichage"></p>
             </div>
-            <p class="instruction">Choisissez !</p>
-            <button id="Pierre"><img class="svg" src="./images/pierre.svg" alt="pierre"></button>
-            <button id="Feuille"><img class="svg" src="./images/feuille.svg" alt="feuille"></button>
-            <button id="Ciseaux"><img class="svg" src="./images/sciseaux.svg" alt="sciseaux"></button>
-        </section>
-        <hr>
-        <section class="mdp">
-            <h2>Générateur de mots de passe</h2>
-            <label for="longueur">Longueur du mot de passe :</label>
-            <input type="number" id="longueur" min="4" max="50" value="10">
-            <label for="majuscule">Majuscules ?</label>
-            <input type="checkbox" id="majuscule" checked>
-            <label for="chiffre">Chiffres ?</label>
-            <input type="checkbox" id="chiffre" checked>
-            <label for="special">Caractères spéciaux ?</label>
-            <input type="checkbox" id="special" checked>
-            <!-- <label for="interdit">Caractères interdits :</label>
-            <input type="text" id="interdit" placeholder="&quot; &apos; &lt; &gt; &amp;"> -->
-            <br>
-            <button id="generer">Générer</button>
-            <p id="motDePasse"></p>
-        </section>
+        </div>
+        <p class="instruction">Choisissez !</p>
+        <button id="Pierre"><img class="svg" src="./images/pierre.svg" alt="pierre"></button>
+        <button id="Feuille"><img class="svg" src="./images/feuille.svg" alt="feuille"></button>
+        <button id="Ciseaux"><img class="svg" src="./images/sciseaux.svg" alt="sciseaux"></button>
     </main>
-    <script src="./js/script.js"></script>
-    <script src="./js/mdp.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
