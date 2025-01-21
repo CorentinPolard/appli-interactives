@@ -7,60 +7,25 @@ function motDePasse(length) {
     const chiffres = "0123456789";
     const speciaux = ":.+-[]*~_#!?$%^()&={}|/";
 
-    let composants = [];
+    const composants = [alphabet];
+    if (document.querySelector("#majuscule").checked) {
+        composants.push(majuscules);
+    }
+    if (document.querySelector("#chiffre").checked) {
+        composants.push(chiffres);
+    }
+    if (document.querySelector("#special").checked) {
+        composants.push(speciaux);
+    }
 
     for (let car = 0; car < length; car++) {
-        if (document.getElementById("majuscule").checked && document.getElementById("chiffre").checked && document.getElementById("special").checked) {
-            composants.push(alphabet, majuscules, chiffres, speciaux); 
-            num = Math.floor(Math.random() * composants.length);
-            tab.splice(Math.floor(Math.random() * tab.length), 0, composants[num][Math.floor(Math.random() * composants[num].length)])
-        }
-        else if (document.getElementById("majuscule").checked && document.getElementById("chiffre").checked) {
-            composants.push(alphabet, majuscules, chiffres); 
-            num = Math.floor(Math.random() * composants.length);
-            tab.splice(Math.floor(Math.random() * tab.length), 0, composants[num][Math.floor(Math.random() * composants[num].length)])
-        }
-        else if (document.getElementById("majuscule").checked && document.getElementById("special").checked) {
-            composants.push(alphabet, majuscules, speciaux); 
-            num = Math.floor(Math.random() * composants.length);
-            tab.splice(Math.floor(Math.random() * tab.length), 0, composants[num][Math.floor(Math.random() * composants[num].length)])
-        }
-        else if (document.getElementById("chiffre").checked && document.getElementById("special").checked) {
-            composants.push(alphabet, chiffres, speciaux); 
-            num = Math.floor(Math.random() * composants.length);
-            tab.splice(Math.floor(Math.random() * tab.length), 0, composants[num][Math.floor(Math.random() * composants[num].length)])
-        }
-        else if (document.getElementById("majuscule").checked) {
-            composants.push(alphabet, majuscules); 
-            num = Math.floor(Math.random() * composants.length);
-            tab.splice(Math.floor(Math.random() * tab.length), 0, composants[num][Math.floor(Math.random() * composants[num].length)])
-        }
-        else if (document.getElementById("chiffre").checked) {
-            composants.push(alphabet, chiffres); 
-            num = Math.floor(Math.random() * composants.length);
-            tab.splice(Math.floor(Math.random() * tab.length), 0, composants[num][Math.floor(Math.random() * composants[num].length)])
-        }
-        else if (document.getElementById("special").checked) {
-            composants.push(alphabet, speciaux); 
-            num = Math.floor(Math.random() * composants.length);
-            tab.splice(Math.floor(Math.random() * tab.length), 0, composants[num][Math.floor(Math.random() * composants[num].length)])
-        }
-        else {
-            tab.push(alphabet[Math.floor(Math.random() * 26)])
-        }
+        const set = composants[Math.floor(Math.random() * composants.length)];
+        tab.push(set[Math.floor(Math.random() * set.length)]);
     }
 
-    let mdp = "" ;
-    
-    for (let car of tab) {
-        mdp += car;
-    }
-
-    const affichage = document.querySelector("#motDePasse");
-    affichage.innerHTML = mdp;
+    const mdp = tab.join('');
+    document.querySelector("#motDePasse").innerHTML = mdp;
     return mdp;
 }
 
-
-
-generer.addEventListener("click", () => motDePasse(document.getElementById("longueur").value))
+generer.addEventListener("click", () => motDePasse(document.querySelector("#longueur").value))
