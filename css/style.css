@@ -84,7 +84,7 @@ hr {
     width: 90%;
     display: flex;
     flex-flow: column wrap;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     font-size: 1.2em;
     background-color: #582C12;
@@ -111,7 +111,7 @@ input {
         font-size: 2em;
     }
 
-    p {
+    .instruction {
         font-size: 1.5em;
     }
 
@@ -142,7 +142,6 @@ input {
 
     .mdp {
         width: 50%;
-        font-size: 1.5em;
     }
 
     #generer {
