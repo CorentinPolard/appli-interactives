@@ -31,11 +31,10 @@ function createList() {
     div.appendChild(deleteList);
     deleteList.innerText = 'Supprimer la liste';
 
-
     // Ajouter des tâches à la liste
     addListItem.addEventListener('click', () => {
-        const deleteButton = document.createElement('button');
         const li = document.createElement('li');
+        const deleteButton = document.createElement('button');
         if (itemName.value != '') {
             ul.appendChild(li);
             deleteButton.innerText = 'Supprimer';

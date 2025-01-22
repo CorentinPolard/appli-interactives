@@ -136,6 +136,17 @@ li {
     justify-content: space-between;
 }
 
+#tache, #ajouter {
+    text-align: center;   
+    background-color: #582C12;
+    color: #FFF3E0;
+    border-radius: 5px;
+}
+
+#tache:hover {
+    border-color: #D668E3;
+}
+
 @media screen and (min-width: 768px) {
     h2 {
         font-size: 1.75em;
@@ -176,6 +187,11 @@ li {
 
     #generer {
         font-size: 1.2em;
+    }
+
+    #tache, #ajouter {
+        height: 50px; 
+        width: 150px;    
     }
 }
 
