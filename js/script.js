@@ -41,11 +41,6 @@ function pierreFeuilleCiseaux() {
     return;
 }
 
-
-// const compteur = document.querySelector(".compteur");
-// let nbrVictoire = 0;
-// compteur.innerHTML = `Nombre de victoires : ${nbrVictoire}.`
-
 const pierre = document.querySelector("#Pierre");
 const feuille = document.querySelector("#Feuille");
 const ciseaux = document.querySelector("#Ciseaux");

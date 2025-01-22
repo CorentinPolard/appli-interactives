@@ -7,6 +7,10 @@ body {
     text-align: center;
 }
 
+h1 {
+    margin-bottom: 0;
+}
+
 .width {
     width: 100%;
 }
@@ -59,12 +63,12 @@ p {
     width: 100%;
 }
 
-button {
+.player {
     border-radius: 50%;
     background-color: #582C12;
 }
 
-button:hover {
+.player:hover {
     transform: scale(1.1);
 }
 
@@ -106,9 +110,35 @@ input {
     font-size: 1em;
 }
 
+.list-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.liste {
+    border: solid 1px #582C12;
+    border-radius: 5px;
+    background-color: #582C12;
+    color: #FFF3E0;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+ul {
+    padding: 20px;
+    margin: 0;
+}
+
+li {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+}
+
 @media screen and (min-width: 768px) {
-    h1 {
-        font-size: 2em;
+    h2 {
+        font-size: 1.75em;
     }
 
     .instruction {

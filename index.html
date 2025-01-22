@@ -7,9 +7,12 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <header>
+        <h1>Bienvenue !</h1>
+    </header>
     <main>
         <section class="pfc">
-            <h1 class="width">Pierre, feuille, ciseaux&nbsp;!</h1>
+            <h2 class="width">Pierre, feuille, ciseaux&nbsp;!</h1>
             <p class="compteur"></p>
             <div class="adversaire">
                 <img class="avatar" src="./images/ordinateur.gif" alt="Ordinateur humanïde souriant">
@@ -19,9 +22,9 @@
                 </div>
             </div>
             <p class="instruction">Choisissez !</p>
-            <button id="Pierre"><img class="svg" src="./images/pierre.svg" alt="pierre"></button>
-            <button id="Feuille"><img class="svg" src="./images/feuille.svg" alt="feuille"></button>
-            <button id="Ciseaux"><img class="svg" src="./images/sciseaux.svg" alt="sciseaux"></button>
+            <button id="Pierre" class="player"><img class="svg" src="./images/pierre.svg" alt="pierre"></button>
+            <button id="Feuille" class="player"><img class="svg" src="./images/feuille.svg" alt="feuille"></button>
+            <button id="Ciseaux" class="player"><img class="svg" src="./images/sciseaux.svg" alt="sciseaux"></button>
         </section>
         <hr>
         <section class="mdp">
@@ -46,8 +49,16 @@
             <button id="generer">Générer</button>
             <p id="motDePasse"></p>
         </section>
+        <hr>
+        <section class="toDoList">
+            <h2>Ma liste de tâches</h2>
+            <input type="text" id="tache" placeholder="Ajouter une liste">
+            <button id="ajouter">Ajouter</button>
+            <div class="list-container"></div>
+        </section>
     </main>
     <script src="./js/script.js"></script>
     <script src="./js/generateurMotDePasse.js"></script>
+    <script src="./js/toDoList.js"></script>
 </body>
 </html>
